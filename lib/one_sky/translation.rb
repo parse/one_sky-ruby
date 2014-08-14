@@ -61,6 +61,7 @@ module OneSky
 
     YAML_FORMAT = "RUBY_YAML".freeze
     PO_FORMAT = "GNU_PO".freeze
+    STRINGS_FORMAT = "IOS_STRINGS".freeze
 
     # I don't believe these work right now.
 
@@ -72,6 +73,11 @@ module OneSky
       # Upload a string file to add new strings. In GNU_PO format.
       def upload_po(file)
         upload_file(file, PO_FORMAT)
+      end
+
+      # Upload a string file to add new strings. In STRINGS format.
+      def upload_strings(file)
+        upload_file(file, STRINGS_FORMAT)
       end
 
     # Download strings and translations as string file. In RUBY_YAML format.
